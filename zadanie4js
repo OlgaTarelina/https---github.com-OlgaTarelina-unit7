@@ -1,0 +1,23 @@
+const kitchen = function (name, power) {
+  this.name = name;
+  this.power = power;
+  this.connect = true;
+};
+kitchen.prototype.connected = function () {
+    console.log(`${this.name} подключен в сеть`);
+    this.connect = true;
+};
+kitchen.prototype.unconnected = function () {
+    console.log(`${this.name} выключен в сеть`);
+    this.connect = false;
+};
+function Moroz(name, brand, power) {
+  this.name = 'xolodilnik';
+  this.brand = 'atlant';
+  this.power = 120;
+  this.connect = true;
+}
+Moroz.prototype = new kitchen();
+const MorozBig = new Moroz("Xolodilnik", "Atlant", 120);
+MorozBig.unconnected();
+console.log(MorozBig)

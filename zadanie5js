@@ -1,0 +1,11 @@
+class Kitchen {
+constructor(options)
+   this.name = options.name;
+   this.power = options.power;
+   this.connect = options.true;
+} 
+const kitchen = new Kitchen({
+  name:"Xolodilnik",
+  power:120,
+  connect:true
+})
